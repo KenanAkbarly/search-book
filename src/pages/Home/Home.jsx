@@ -145,7 +145,7 @@ const Home = () => {
     let BASE_URL = `https://www.googleapis.com/books/v1/volumes`;
 
   const getItems = async () => {
-    const result = await axios.get(`${BASE_URL}?q=${input}`);
+    const result = await axios.get(`${BASE_URL}?q=${input}&maxResults=40`);
     setData(result.data);
   };
 
