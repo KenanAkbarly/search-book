@@ -164,7 +164,7 @@ const Home = () => {
             </Search>
             </form>
         </SearchBody>
-    </TopBody>
+    </TopBody>:
     <Container>
         <Cards>
             {
@@ -174,7 +174,7 @@ const Home = () => {
                 <CardItem key={index}>
                 <Image src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} />
                 <H5>{book.volumeInfo.title}</H5>
-                <H6>J.K.Rowling</H6>
+                <H6>{book.volumeInfo?.authors?(book.volumeInfo?.authors):("David R. George III")}</H6>
                 <div style={{
                     display:'flex',justifyContent:'center',width:'100%'}}>
                 <Preview><a href={book.volumeInfo?.previewLink} target='_blank'>Preview</a></Preview>
